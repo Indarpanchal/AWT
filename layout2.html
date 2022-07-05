@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout2</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+    <style type="text/css">
+        * {
+            font-size: 22px;
+            font-weight: bold;
+
+        }
+
+        #r1 {
+            background-color:burlywood;
+            height: 50px;
+            padding-top: 10px;
+            width: 100%;
+            padding-left: 2%;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        #r2,
+        #r5 {
+            background-color: black;
+            height: 100px;
+            padding-top: 40px;
+            width: 100%;
+            text-align: center;
+            padding-left: 2%;
+            margin-bottom: 10px;
+        }
+        #r2 ul{
+            display: flex;
+            justify-content: center;
+        }
+        #r2 ul li{
+            list-style: none;
+            padding: 0px 10px;
+            color: white;
+        }
+
+        #r3 {
+            background-color:aqua;
+            height: 90px;
+            padding-top: 60px;
+            width: 100%;
+            padding-left: 2%;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        #r4 {
+            height: 450px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        #r4c1 {
+            width: 30%;
+            margin-right: 3.5%;
+            background-image: url("img/IMG-20160705-WA0016.jpg");
+            background-size: cover;
+        }
+
+        #r4c2 {
+            width: 30%;
+            margin-right: 3.5%;
+        }
+
+        #r4c3 {
+            width: 30%;
+            margin-right: 3%;
+        }
+
+        #r4 div {
+            float: left;
+            height: 400px;
+            padding-top: 50px;
+            text-align: center;
+            background-color:cadetblue;
+        }
+
+        .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        /* Add a hover effect if you want */
+        .fa:hover {
+            opacity: 0.7;
+            transform: scale(1.1);
+        }
+
+        /* Set a specific color for each brand */
+
+        /* Facebook */
+        .fa-twitter {
+            border: 2px solid white;
+        }
+    </style>
+    <h2>layout2</h2>
+    <div id="r1">
+        <h1>My First Webpage</h1>
+    </div>
+    <div id="r2">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Sign in</li>
+            <li>Create An Account</li>
+            <li>Help</li>
+        </ul>
+    </div>
+    <div id="r3">
+
+   
+        <i class="fa fa-address-book-o" style="font-size:36px"></i>
+      
+        Contact Us
+    </div>
+    <div id="r4">
+        <div id="r4c1"></div>
+        <div id="r4c2">click here to open link
+            <a href="https://silveroakuni.ac.in/" target="_blank">Silveroakuni</a>
+        </div>
+        <div id="r4c3">click here for open video<iframe width="420" height="315"
+                src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe></div>
+    </div>
+    <div id="r5">
+
+        <a class="fa fa-twitter" href="https://www.twitter.com"></a>
+
+    </div>
+</body>
+</html>

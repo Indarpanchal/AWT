@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .box{
+            width: 350px;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0 0 5px gray;
+            position: relative;
+            margin: 200px auto;
+
+        }
+
+        .box img{
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .box-contant{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .box-contant:before,
+        .box-contant:after{
+            content: "";
+            width: 95%;
+            height: 47%;
+            background-color: #eb0606;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            transition: all 0.5s;
+            opacity: 0;
+        }
+        .box-contant:before{
+            top: -30%;
+        }
+        .box-contant:after{
+            bottom: -30%;
+        }
+        .box:hover .box-contant:before{
+            top: 3%;
+            opacity: 0.8;
+        }
+        .box:hover .box-contant:after{
+            bottom: 3%;
+            opacity: 0.8;
+        }
+        .contant{
+            width: 100%;
+            height: 45%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            text-align: center;
+            z-index: 1;
+            transform: rotate(90deg);
+            opacity: 0;
+            transition: all 0.8s;
+        }
+        .social{
+            padding: 0;
+            margin: 0 0 20px 0;
+            list-style: none;
+        }
+        .social li{
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .social li a{
+            color: black;
+            background-color: white;
+            display: block;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            line-height: 35px;
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+        .name{
+            color: white;
+            font-size: 22px;
+            margin-bottom: 7px;
+            text-transform: capitalize;
+        }
+        .info{
+            color: white;
+            font-size: 14px;
+            text-transform: capitalize;
+
+        }
+        .box:hover .contant{
+            transform: rotate(0);
+            opacity: 1;
+        }
+        .social li a:hover{
+            color: #4dc408;
+            background-color: rgb(23, 26, 26);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="/img/bg1.jpg" alt="">
+        <div class="box-contant">
+            <div class="contant">
+                <ul class="social">
+                    <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                    <li><a href=www.google.com""><i class="fa fa-google"></i></a></li>
+                    <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                </ul>
+                <h3 class="name">Food Center</h3>
+                <span class="info">Contact Us</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
