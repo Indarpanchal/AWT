@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        .accordion{
+            max-width: 40%;
+            background-color: gray;
+            margin: 50px;
+            
+        }
+        .accordion-tab label{
+            color: white;
+            background-color: blueviolet;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: bold;
+            display: block;
+            position: relative;
+            padding: 12px 20px;
+            cursor: pointer;
+            border-top: 2px solid white;
+            
+        }
+
+
+        .accordion-tab .accordion-contant{
+            max-height: 0;
+            transition: all 1s;
+            overflow: hidden;
+        }
+        .accordion-toggle{
+            display: none;
+        }
+     
+        .accordion-tab .accordion-toggle:checked ~
+        .accordion-contant{
+            max-height: 100vh;
+            
+        }
+        .accordion-contant p{
+            padding: 15px 20px;
+        }
+         .accordion-tab > label::after{
+            content: "\f078";
+            font-family: fontawesome;
+            position: absolute;
+            top: 13px;
+            right: 40px;
+            transform: rotate(90deg);
+            transition: transform 0.3s;
+
+        }
+        .accordion-tab > .accordion-toggle:checked ~ label::after{
+            transform: rotate(0);
+        }
+
+       
+    </style>
+</head>
+<body>
+    <div class="accordion">
+        <div class="accordion-tab">
+            <input type="radio" id="toggle 1"  class="accordion-toggle" name="toggle">
+            <label for="toggle 1">Tab-1 contant</label>
+            
+            <div class="accordion-contant">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, quidem. Tempore explicabo vel molestias quisquam illum voluptatum incidunt tempora est corrupti, voluptatibus voluptas eos qui obcaecati, exercitationem delectus ipsum harum.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt soluta sed corporis quo dignissimos, vero libero expedita cupiditate optio accusantium!
+                </p>
+            </div>
+        </div>
+        <div class="accordion-tab">
+            <input type="radio" id="toggle 2"  class="accordion-toggle" name="toggle">
+            <label for="toggle 2">Tab-2 contant</label>
+            <div class="accordion-contant">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, quidem. Tempore explicabo vel molestias quisquam illum voluptatum incidunt tempora est corrupti, voluptatibus voluptas eos qui obcaecati, exercitationem delectus ipsum harum.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt soluta sed corporis quo dignissimos, vero libero expedita cupiditate optio accusantium!
+                </p>
+            </div>
+        </div>
+        <div class="accordion-tab">
+            <input type="radio" id="toggle 3"  class="accordion-toggle" name="toggle">
+            <label for="toggle 3">Tab-3 contant</label>
+            <div class="accordion-contant">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, quidem. Tempore explicabo vel molestias quisquam illum voluptatum incidunt tempora est corrupti, voluptatibus voluptas eos qui obcaecati, exercitationem delectus ipsum harum.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt soluta sed corporis quo dignissimos, vero libero expedita cupiditate optio accusantium!
+                </p>
+            </div>
+        </div>
+        <div class="accordion-tab">
+            <input type="radio" id="toggle 4"  class="accordion-toggle" name="toggle">
+            <label for="toggle 4">Tab-4 contant</label>
+            <div class="accordion-contant">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, quidem. Tempore explicabo vel molestias quisquam illum voluptatum incidunt tempora est corrupti, voluptatibus voluptas eos qui obcaecati, exercitationem delectus ipsum harum.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt soluta sed corporis quo dignissimos, vero libero expedita cupiditate optio accusantium!
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

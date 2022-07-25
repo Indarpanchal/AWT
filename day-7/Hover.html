@@ -1,0 +1,104 @@
+<html>
+
+<head>
+	<title>CSS Hover Element - Selector OR Child Combinator</title>
+	<style type="text/css">
+		/* .red:hover{
+				display:block;
+				color: red;
+            } */
+		ul li:hover {
+			display: block;
+			color: red;
+		}
+		ul li {
+			display: block;
+			color: black;
+		}
+
+		#MainUL li ul li {
+			display: none;
+		}
+
+		#MainUL li:hover ul li {
+			display: block;
+		}
+
+		#MainUL li:hover ul li ul li {
+			display: none;
+		}
+
+		#MainUL li ul li:hover ul li {
+			display: block;
+		}
+
+		#MainUL li ul li:hover ul li ul li {
+			display: none;
+		}
+
+		#MainUL li ul li ul li:hover ul li {
+			display: block;
+		}
+	</style>
+
+</head>
+
+<body>
+	<ul id="MainUL">
+		<li>Indar kumar
+			<ul>
+				<li>En. No.
+					<ul><li>200203042058</li></ul>
+				</li>
+				<li>Division
+					<ul><li>5th-sem-A</li></ul>
+				</li>
+				<li>College
+					<ul><li>ASOIT</li></ul>
+				</li>
+			</ul>
+		</li>
+		<li>Jayesh
+			<ul>
+				<li>En. No.
+					<ul><li>190024569784</li></ul>
+				</li>
+				<li>Division
+					<ul><li>7th-sem A</li></ul>
+				</li>
+				<li>College
+					<ul><li>SOU</li></ul>
+				</li>
+			</ul>
+		</li>
+		<li>Sohan
+			<ul>
+				<li>En. No.
+					<ul><li>200306894226</li></ul>
+				</li>
+				<li>Division
+					<ul><li>5th-sem B</li></ul>
+				</li>
+				<li>College
+					<ul><li>ASOIT</li></ul>
+				</li>
+			</ul>
+		</li>
+		<li>Jigar
+			<ul>
+				<li>En. No.
+					<ul><li>210457986254</li></ul>
+				</li>
+				<li>Division
+					<ul><li>1th-sem E</li></ul>
+				</li>
+				<li>College
+					<ul><li>SOU</li></ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+</body>
+
+</html>

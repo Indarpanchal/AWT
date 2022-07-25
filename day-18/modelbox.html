@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            text-align: center;
+        }
+        .container{
+            width: 1100px;
+            margin: 0 auto;
+        }
+        .modal-container .modal-btn{
+            display: block;
+            color: white;
+            background-color: #d40b15;
+            width: 100px;
+            height: 40px;
+            font-size: 22px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 3px;
+            cursor: pointer;
+            box-shadow: 0 5px 5px -5px #333 ;
+            transition: background 0.3s ease-in-out;
+        }
+        .modal-container .modal-btn:hover{
+            background-color: #db9705;
+        }
+        #modal-toggle{
+            display: none;
+        }
+        .modal-container .modal-contant,
+        .modal-container .modal-backdrop{
+            height: 0;
+            width: 0;
+            opacity: 0;
+            visibility: hidden;
+            cursor: pointer;
+        }
+
+        .modal-container #modal-toggle:checked ~ .modal-backdrop{
+            background-color: rgba(0, 0, 0, 0.6);
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 10;
+            visibility: visible;
+            opacity: 1;
+            
+        }
+        .modal-container #modal-toggle:checked ~ .modal-contant{
+            background-color: white;
+            width: 400px;
+            height: 300px;
+            padding: 10px 30px;
+            border-radius: 4px;
+            position: fixed;
+            top: 12%;
+            left: calc(50% - 200px);
+            z-index: 100;
+            cursor: auto;
+            visibility: visible;
+            opacity: 1;
+            box-shadow: 0 3px 7px rgba(0, 0, 0, 0.6);
+        }
+        .modal-container .modal-contant h2{
+            border-bottom: 2px solid black;
+            padding-bottom: 5px;
+        }
+        .modal-contant .modal-close{
+            color: #aaa;
+            background-color: white;
+            width: 25px;
+            height: 25px;
+            font-size: 27px;
+            text-align: center;
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            cursor: pointer;
+         }
+         .modal-contant .modal-close:hover{
+             color: #333;
+         }
+         .modal-contant .modal-contant-btn{
+             color: white;
+             background: #3498db;
+             height: 32px;
+             width: 50px;
+             font-size: 16px;
+             text-align: center;
+             cursor: pointer;
+             padding-top: 10px;
+             position: absolute;
+             bottom: 20px;
+             right: 30px;
+         }
+         .modal-contant .modal-contant-btn:hover{
+             background: #152631;
+         }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Modal Box in CSS</h1>
+         
+        <div class="modal-container">
+            <input type="checkbox" id="modal-toggle">
+            <label for="modal-toggle" class="modal-btn">Click Me</label>
+            <div class="modal-backdrop"></div>
+
+            <div class="modal-contant">
+                <label for="modal-toggle" class="modal-close">&times;</label>
+                <h2>Modal Title</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla ipsa aspernatur ducimus placeat quasi sapiente iusto libero qui hic minima.</p>
+                <label for="modal-toggle" class="modal-contant-btn">Ok</label>
+            </div>
+        </div>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, ullam excepturi! Deleniti non aliquid eaque animi deserunt, dicta error esse, fuga repellat vel illo in consectetur tempore modi praesentium ipsa ad odit minus quae, ducimus repellendus dolorem sed quaerat adipisci. Nihil quasi beatae adipisci consequuntur voluptatibus magnam ab exercitationem rem possimus maiores aperiam officiis tempore, voluptate vitae inventore voluptas fugit doloremque corporis, impedit ea explicabo? Libero, maiores vero. Sequi libero quis ab. Nemo praesentium, laudantium dignissimos aperiam voluptate in. Sit, eum distinctio dolorem tempore consectetur ab. Nam labore sit doloribus delectus voluptatibus. Quas dignissimos odit quia similique optio excepturi harum obcaecati doloribus magnam reprehenderit debitis voluptatum molestiae libero, dolore, praesentium recusandae repellat provident, officiis autem sit placeat ex nulla saepe reiciendis? Repellat asperiores deleniti veniam nobis ullam et obcaecati laboriosam sed quae iusto, nostrum nam perspiciatis rerum non, omnis, quod perferendis debitis! Natus autem fuga praesentium sunt dicta ad quidem ducimus amet porro aliquam cumque, itaque blanditiis unde architecto quod impedit, quia consequatur ratione minus eligendi ipsa voluptas! Maxime quaerat fugit excepturi voluptas eveniet, alias sed nisi tempora velit quis corporis voluptatibus eligendi consequuntur labore nostrum officiis aperiam vitae cupiditate quas! Quas placeat ducimus, magnam voluptates dolor nostrum ipsam laudantium?</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo alias sit natus quam modi officiis, quibusdam veritatis quaerat ipsam cumque fugit necessitatibus impedit molestiae, nesciunt doloribus libero et voluptatem. Nobis neque provident, molestiae cumque quidem unde adipisci nesciunt earum impedit expedita accusantium corporis quasi quaerat quod. Repudiandae sit veniam optio magni autem omnis accusantium, doloribus voluptas libero fugiat tenetur aliquid ab. Natus facilis nam, est culpa soluta dicta quam dolorem deserunt officia voluptas numquam explicabo ullam asperiores necessitatibus eaque minima saepe magnam debitis impedit pariatur quibusdam nostrum. Sapiente, ipsum aliquam provident consequuntur eaque unde pariatur dolores nulla quidem facilis accusamus eius quis, minima aspernatur soluta tempora. Distinctio, enim! Quasi soluta nostrum officia, illo facilis itaque magnam, voluptates maiores voluptatum perferendis molestias deserunt explicabo a distinctio veniam optio. Distinctio similique, cum at voluptatem neque cupiditate beatae porro quaerat fuga dolorem eaque voluptates quisquam dolorum, architecto nam iste quidem, aspernatur officiis? Culpa, ab officia suscipit vel tenetur dolore sapiente, dolores unde nostrum qui reprehenderit deserunt reiciendis aut voluptatem totam corporis saepe autem maxime quos obcaecati nesciunt quasi! Obcaecati eum adipisci veritatis, distinctio voluptates rerum commodi ipsam, ipsa earum expedita ducimus esse! Reprehenderit expedita sed ad. Praesentium aliquam tenetur fugit quisquam nemo velit minima quia dolores adipisci corporis in, cumque qui soluta delectus modi? Rem suscipit, rerum cumque ducimus quis magnam recusandae vero asperiores. Quo aspernatur cum qui impedit doloribus doloremque nihil aliquam sed perspiciatis corrupti totam ad reprehenderit ratione aperiam eum iusto officia, ab quidem ut minus? Reiciendis incidunt quidem rem enim voluptatum quasi maxime perferendis pariatur dolores sunt quibusdam, illum, excepturi suscipit recusandae necessitatibus voluptatibus, ipsa accusamus tempore culpa. Harum doloribus, distinctio animi expedita dolore itaque aperiam nesciunt ad vero aliquid eius voluptatum ipsa pariatur maiores hic a dolor autem nisi minima, cupiditate saepe minus similique. Nulla beatae cumque magni repellat ab dolor eum officia maxime, quibusdam, quia tempore commodi tenetur labore suscipit aspernatur. Porro laborum harum voluptatem deleniti obcaecati, doloremque ad beatae rem, eaque nisi sint repellat autem unde officiis non fugiat, earum distinctio nihil cupiditate dignissimos! Assumenda soluta inventore autem id reiciendis provident a eveniet iste nam eaque quis mollitia, maxime architecto! Ipsa repudiandae eveniet officia iste, obcaecati asperiores ipsum placeat animi ullam repellendus voluptate excepturi maxime repellat quisquam vero facilis blanditiis quam iure dolor eligendi debitis eaque a officiis? A, tempora consectetur! Necessitatibus quae omnis tempore minus. Dicta necessitatibus maiores pariatur iure, perspiciatis accusamus ad. Nisi optio animi fugiat dolores ipsum odit, quaerat rerum, repellendus incidunt dicta cupiditate? Placeat impedit consequuntur corporis. Ducimus consequuntur fugit accusantium quos nulla modi doloremque temporibus, incidunt reprehenderit totam recusandae ad obcaecati saepe iure aspernatur veniam minus quisquam corporis numquam quia error laborum! Ut vero, recusandae nam delectus exercitationem dolorum repellendus praesentium quia expedita, nobis cupiditate tenetur harum iusto distinctio alias architecto. Natus, reiciendis cupiditate doloribus, tempore quibusdam laudantium fugit modi recusandae itaque voluptatum dolorum, fugiat sequi dignissimos deserunt eius. Mollitia corrupti odit exercitationem nisi, possimus debitis molestias iusto ea? Consequatur voluptatum nostrum sint itaque maxime eveniet, esse natus. Fugit corrupti eaque consequatur.</p>
+    </div>
+</body>
+</html>

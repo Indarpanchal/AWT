@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculating</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+
+    body{
+        background-color: rgba(231, 208, 231, 0.667);
+    }
+    .container{
+        height: 90%;
+        width: 60%;
+        margin: auto;
+        background-color: white;
+    }
+    
+    .heading{
+        height: 70px;
+        width: 100%;
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+
+    .heading h1{
+        padding: 15px;
+    }
+
+    .main{
+        padding: 70px 0px;
+        width: 60%;
+        display: flex;
+        justify-content:space-around;
+        margin: auto;
+    }
+
+    .main div div{
+        margin: 6px 0;
+        font-size: 16px;
+    }
+
+    .main div div label{
+        font-weight: bold;
+    }
+
+    .main div div input{
+        font-size: 13px;
+        padding: 2px;
+    }
+    
+    .main div div button{
+        width: 175px;
+        font-size: 16px;
+        margin-top: 5px;
+        padding: 2px;
+        background: black;
+        color: white;
+        border-radius: 5px;
+    }
+
+    .table{
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+
+    .table table,td{
+        border: 2px solid black;
+        border-collapse: collapse;
+        padding: 11px 13px;
+        font-weight: bold;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>Grade Calculator</h1>
+        </div>
+        <div class="main">
+            <div>
+                <div class="book1">
+                    <label>Computer</label><br>
+                    <input id="book1" type="number" name="" placeholder="Marks">
+                </div>
+                <div class="book2">
+                    <label>English</label><br>
+                    <input id="book2" type="number" name="" placeholder="Marks">
+                </div>
+                <div class="book3">
+                    <label>Math</label><br>
+                    <input id="book3" type="number" name="" placeholder="Marks">
+                </div>
+                <div class="book4">
+                    <label>Physics</label><br>
+                    <input id="book4" type="number" name="" placeholder="Marks">
+                </div>
+                <div class="book5">
+                    <label>Chemistry</label><br>
+                    <input id="book5" type="number" name="" placeholder="Marks">
+                </div>
+                <div>
+                    <button onclick="calculate()">Calculate</button>
+                </div>
+            </div>
+            <div class="table">
+                <table>
+                    <tr>
+                        <td>Total Marks:</td>
+                        <td>500</td>
+                    </tr>
+                    <tr>
+                        <td>Obtained Marks:</td>
+                        <td id="obtain"></td>
+                    </tr>
+                    <tr>
+                        <td>Percentage:</td>
+                        <td id="per"></td>
+                    </tr>
+                    <tr>
+                        <td>Grade:</td>
+                        <td id="grade"></td>
+                    </tr>
+                    <tr>
+                        <td>Remarks:</td>
+                        <td id="remark"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+
+    <script type="text/javascript" src="/grade.js"></script>
+</body>
+</html>
